@@ -79,13 +79,13 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     // I only have a right rotary encoder
     else if (index == 1) {
         int layer = biton32(layer_state);
-        if (layer == _QWERTY || layer == _NAV) {
+        if (layer == _QWERTY || layer == _MEDIA) {
           if (clockwise) {
             tap_code(KC_VOLU);
           } else {
             tap_code(KC_VOLD);
           }
-        } else if (layer == _MEDIA) {
+        } else if (layer == _NAV) {
            if (clockwise) {
             tap_code(KC_DOWN);
           } else {
